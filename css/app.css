@@ -6521,7 +6521,7 @@ body {
 }
 
 .header .searchBox input {
-  width: 30%;
+  width: 45%;
   height: 10rem;
   font-size: 3.5rem;
   text-indent: 1rem;
@@ -6549,6 +6549,26 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+@media screen and (max-width: 768px) {
+  .header .searchBox.active {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 2rem 0;
+  }
+  .header .searchBox.active input {
+    width: 60%;
+    font-size: 2.5rem;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .header .searchBox.active input {
+    width: 85%;
+  }
 }
 
 @media screen and (max-width: 992px) {
