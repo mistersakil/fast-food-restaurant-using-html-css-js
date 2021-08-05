@@ -175,6 +175,47 @@
     }
   }
   /* bars end */
+  /* searchBox */
+  .searchBox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    // background: rgba(236, 5, 91, 0.8);
+    background: var(--bgPrimary);
+    overflow: hidden;
+    z-index: 2000;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    input {
+      width: 30%;
+      height: 10rem;
+      font-size: 3.5rem;
+      text-indent: 1rem;
+      border-radius: 1rem;
+      border: none;
+      outline: none;
+    }
+    .searchIcon {
+      font-size: 5.5rem;
+      color: var(--colorSecondary);
+      padding: 0 2rem;
+    }
+    .searchBoxClose {
+      position: absolute;
+      right: 1rem;
+      top: 1rem;
+      font-size: 3.5rem;
+      color: var(--colorSecondary);
+      cursor: pointer;
+    }
+    &.active {
+      display: flex;
+    }
+  }
+  /* searchBox end */
 
   @include _mediumScreen {
     @include _padding($x: 1rem);

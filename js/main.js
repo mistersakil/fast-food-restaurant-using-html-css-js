@@ -3,6 +3,9 @@ const body = document.body;
 const bars = document.querySelector(".bars .link");
 const header = document.querySelector(".header");
 const themeChangeBtn = document.querySelector(".themeChangeBtn");
+const searchBoxClose = document.querySelector(".searchBoxClose");
+const searchBox = document.querySelector(".searchBox");
+const searchBtn = document.querySelector(".searchBtn");
 
 /* Navbar toggle button  */
 bars.onclick = function (event) {
@@ -39,3 +42,11 @@ themeChangeBtn.onclick = function (event) {
   }
 };
 /* Theme change  button end */
+/* searchBox  button */
+searchBtn.onclick = function (event) {
+  searchBox.classList.add("active");
+};
+searchBoxClose.onclick = function (event) {
+  searchBox.classList.remove("active");
+};
+/* searchBox  button end */
