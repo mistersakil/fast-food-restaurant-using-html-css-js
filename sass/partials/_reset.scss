@@ -7,6 +7,15 @@
   text-transform: capitalize;
   letter-spacing: 0.1rem;
 }
+:root {
+  --colorBrand: rgb(0, 150, 0);
+  --colorPrimary: rgb(20, 20, 20);
+  --colorSecondary: rgb(255, 255, 255);
+  --bgPrimary: rgb(236, 95, 91);
+  --bgSecondary: rgb(0, 150, 0);
+  --bgLight: rgb(255, 255, 255);
+  --bgGrey: rgb(88, 88, 88);
+}
 html {
   font-size: $fontSize;
   overflow-x: hidden;
@@ -14,11 +23,14 @@ html {
   scroll-padding-top: 6rem;
   scrollbar-width: thin;
 }
+
 body {
   font-size: 1.6rem;
   font-family: Oswald, Roboto, Poppins, sans-serif;
-  color: var(--blue50);
-  position: relative;
-  background: var(--bgWhite);
   min-height: 200vh;
+}
+
+.dark {
+  --bgLight: rgb(20, 20, 20);
+  --bgPrimary: rgb(20, 20, 20);
 }
