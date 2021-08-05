@@ -1,0 +1,24 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  transition: all 0.3s linear;
+  text-decoration: none;
+  text-transform: capitalize;
+  letter-spacing: 0.1rem;
+}
+html {
+  font-size: $fontSize;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  scroll-padding-top: 6rem;
+  scrollbar-width: thin;
+}
+body {
+  font-size: 1.6rem;
+  font-family: Oswald, Roboto, Poppins, sans-serif;
+  color: var(--blue50);
+  position: relative;
+  background: var(--bgWhite);
+  min-height: 200vh;
+}

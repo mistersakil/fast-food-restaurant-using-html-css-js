@@ -1,0 +1,135 @@
+@font-face {
+  font-family: Roboto;
+  src: url(../webfonts/Roboto-Regular.ttf);
+}
+@font-face {
+  font-family: Oswald;
+  src: url(../webfonts/Oswald-Light.ttf);
+}
+@font-face {
+  font-family: Poppins;
+  src: url(../webfonts/Poppins-Regular.ttf);
+}
+
+:root {
+  --red: rgb(255, 0, 0);
+  --red200: rgb(200, 0, 0);
+  --red150: rgb(150, 0, 0);
+  --red100: rgb(100, 0, 0);
+  --red50: rgb(50, 0, 0);
+  --green: rgb(0, 255, 0);
+  --green200: rgb(0, 200, 0);
+  --green150: rgb(0, 150, 0);
+  --green100: rgb(0, 100, 0);
+  --green100: rgb(0, 70, 0);
+  --green50: rgb(0, 50, 0);
+  --blue: rgb(0, 0, 255);
+  --blue200: rgb(0, 0, 200);
+  --blue150: rgb(0, 0, 150);
+  --blue100: rgb(0, 0, 100);
+  --blue50: rgb(0, 0, 50);
+  --blueLight: rgb(0, 153, 255);
+  --blueLight3: rgb(0, 138, 230);
+  --blueLight2: rgb(77, 184, 255);
+  --blueLight3: rgb(230, 247, 255);
+  --black: rgb(0, 0, 0);
+  --black10: rgb(10, 10, 10);
+  --black20: rgb(20, 20, 20);
+  --black30: rgb(30, 30, 30);
+  --black40: rgb(40, 40, 40);
+  --black50: rgb(50, 50, 50);
+  --black80: rgb(80, 80, 80);
+  --grey: rgb(100, 100, 100);
+  --grey150: rgb(150, 150, 150);
+  --grey200: rgb(200, 200, 200);
+  --grey220: rgb(220, 220, 220);
+  --grey240: rgb(240, 240, 240);
+  --grey245: rgb(245, 245, 245);
+  --white: rgb(255, 255, 255);
+  --golden: rgb(218, 165, 32);
+  --bgWhite: rgb(255, 255, 255);
+  --bgBlueExtraLight: rgb(230, 247, 255);
+  --bgGrey: rgb(100, 100, 100);
+  --bgBlueLight: rgb(77, 184, 255);
+  --bgBlue: rgb(0, 0, 255);
+}
+.darkTheme {
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  transition: all 0.3s linear;
+  text-decoration: none;
+  text-transform: capitalize;
+  letter-spacing: 0.1rem;
+}
+html {
+  font-size: 10px;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  scroll-padding-top: 6rem;
+  scrollbar-width: thin;
+}
+body {
+  font-size: 1.6rem;
+  font-family: Poppins, Oswald, Roboto, sans-serif;
+  color: var(--blue50);
+  position: relative;
+  background: var(--bgWhite);
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 1.4rem;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--blueLight2);
+  border-radius: 0rem 0rem 0 2rem;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--blueLight);
+  cursor: pointer;
+}
+/* End: Scrollbar  */
+/* Selection  */
+::selection {
+  background-color: var(--bgBlue);
+  color: var(--white);
+}
+/* End: Selection  */
+
+ul {
+  list-style: none;
+}
+
+a,
+a:link {
+  color: var(--black);
+  font-size: inherit;
+  font-weight: 400;
+  text-decoration: none;
+  cursor: pointer;
+}
+.btn,
+a.btn {
+  background: var(--green150);
+  color: var(--white);
+  padding: 1rem 3rem;
+  border-radius: 2rem;
+  cursor: pointer;
+  outline: 0;
+  border: 0;
+}
+
+.btn:hover,
+a.btn:hover {
+  background: var(--grey200);
+  color: var(--white);
+  padding: 1rem 3rem;
+  border-radius: 2rem;
+  cursor: pointer;
+  transform: scale(1.2);
+}

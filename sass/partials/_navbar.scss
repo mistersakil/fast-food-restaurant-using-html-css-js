@@ -1,0 +1,154 @@
+.header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  height: 8rem;
+  overflow: hidden;
+  @include _padding;
+  @include _alignCenter;
+  justify-content: space-between;
+  box-shadow: 0 0 50px 1px $bgPrimary;
+  /* logo */
+  .logo {
+    @include _alignCenter;
+    gap: 0 1rem;
+    .img {
+      height: 6rem;
+      @include _mediumScreen {
+        height: 4rem;
+      }
+    }
+    .title {
+      color: $colorBrand;
+      overflow: hidden;
+      clip-path: inset(0);
+      transition: all 0.5s linear;
+      font: {
+        size: 3rem;
+        weight: 700;
+      }
+      @include _mediumScreen {
+        font: {
+          size: 2.4rem;
+          weight: 600;
+        }
+      }
+      @include _xxSmallScreen {
+        clip-path: inset(0 0 100% 0);
+        width: 0;
+      }
+    }
+    @include _smallScreen {
+      flex: 1 1 50%;
+    }
+  }
+  /* logo end */
+  /* nav */
+  .nav {
+    flex: 1 1 50%;
+    clip-path: inset(0);
+    transition: all 0.5s linear;
+    @include _justifyCenter;
+    gap: 0 1rem;
+    overflow: hidden;
+    .link {
+      background: $bgPrimary;
+      color: $colorSecondary;
+      border-radius: 1rem;
+      text-decoration: none;
+      z-index: 100;
+      padding: 1rem 2rem;
+      position: relative;
+      font: {
+        size: 1.8rem;
+        weight: 400;
+      }
+      span {
+        color: $colorSecondary;
+        z-index: 99;
+        position: relative;
+      }
+      &::after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: $bgSecondary;
+        top: 0;
+        left: 0;
+        z-index: 98;
+        border-radius: 1rem;
+        clip-path: inset(0 0 100% 0);
+        transition: all 0.3s linear;
+      }
+      &:hover::after {
+        content: "";
+        clip-path: inset(0);
+      }
+
+      @include _largeScreen {
+        @include _padding($y: 1rem, $x: 1.5rem);
+      }
+      @include _mediumScreen {
+        @include _padding($y: 0.5rem, $x: 1rem);
+        font: {
+          size: 1.6rem;
+        }
+      }
+    }
+
+    @include _smallScreen {
+      clip-path: inset(0 0 100% 0);
+      flex: 1 1 0%;
+    }
+  }
+  /* nav end */
+  /* icons */
+  .icons {
+    @include _justifyRight;
+    gap: 0 1rem;
+    .link {
+      position: relative;
+      padding: 1rem;
+      font-size: 2rem;
+      background: $bgPrimary;
+      clip-path: circle(2rem at center);
+      color: $colorSecondary;
+      z-index: 100;
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background: $bgSecondary;
+        z-index: 98;
+        clip-path: circle(0rem at center);
+        transition: all 0.4s ease-in-out;
+      }
+      &:hover::before {
+        clip-path: circle(100% at center);
+      }
+      .icon {
+        z-index: 99;
+        position: relative;
+      }
+
+      @include _mediumScreen {
+        font-size: 1.4rem;
+        padding: 1.3rem;
+      }
+    }
+    @include _mediumScreen {
+      gap: 0 0.5rem;
+    }
+    @include _smallScreen {
+      flex: 1 1 50%;
+    }
+  }
+  /* icons end */
+  @include _mediumScreen {
+    @include _padding($x: 1rem);
+  }
+}

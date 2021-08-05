@@ -1,0 +1,52 @@
+@mixin _alignCenter {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+}
+@mixin _justifyCenter {
+  @include _alignCenter;
+  justify-content: center;
+}
+@mixin _justifyRight {
+  @include _alignCenter;
+  justify-content: flex-end;
+}
+
+@mixin _padding($y: 0, $x: 5%) {
+  padding: $y $x;
+}
+
+/* Media query Medium Device  992px to 1200px */
+@mixin _largeScreen {
+  @media screen and (max-width: 1200px) {
+    @content;
+  }
+}
+
+/* Media query Medium Device  769px to 992px */
+@mixin _mediumScreen {
+  @media screen and (max-width: 992px) {
+    @content;
+  }
+}
+
+/* Media query Small Device 577px to 768px */
+@mixin _smallScreen {
+  @media screen and (max-width: 768px) {
+    @content;
+  }
+}
+
+/* Media query Extra Small Device 351px to 576px  */
+@mixin _xSmallScreen {
+  @media screen and (max-width: 576px) {
+    @content;
+  }
+}
+
+/* Media query Double Extra Small Device 0 to 350px  */
+@mixin _xxSmallScreen {
+  @media screen and (max-width: 350px) {
+    @content;
+  }
+}
