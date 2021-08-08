@@ -1,8 +1,10 @@
-$fontSize: 10px;
-$colorBrand: rgb(0, 150, 0);
-$colorPrimary: rgb(20, 20, 20);
-$colorSecondary: rgb(255, 255, 255);
-$bgPrimary: rgb(236, 95, 91);
-$bgSecondary: rgb(0, 150, 0);
-$bgLight: rgb(255, 255, 255);
-$bgGrey: rgb(88, 88, 88);
+@mixin variables {
+  --fontSize: 10px;
+  --colorBrand: rgb(0, 150, 0);
+  --colorPrimary: rgb(20, 20, 20);
+  --colorSecondary: rgb(255, 255, 255);
+  --bgPrimary: rgb(236, 5, 91);
+  --bgSecondary: rgb(0, 150, 0);
+  --bgLight: rgb(255, 255, 255);
+  --bgGrey: rgb(88, 88, 88);
+}

@@ -1,0 +1,51 @@
+@keyframes sliderScaleAnimation {
+  0% {
+    transform: scale(0.85);
+    opacity: 0.85;
+  }
+  50% {
+    transform: scale(1.05);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(0.85);
+    opacity: 0.85;
+  }
+}
+
+@keyframes textTranslation {
+  0% {
+    transform: translate(-100%);
+  }
+  100% {
+    transform: translate(0);
+  }
+}
+
+@keyframes textTranslationToBottom {
+  0% {
+    transform: translate(0, -50px);
+  }
+  100% {
+    transform: translate(0, 0px);
+  }
+}
+@keyframes upAndDown {
+  0% {
+    transform: translate(0, 0px);
+  }
+  50% {
+    transform: translate(0, 5px);
+  }
+  100% {
+    transform: translate(0, 0px);
+  }
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

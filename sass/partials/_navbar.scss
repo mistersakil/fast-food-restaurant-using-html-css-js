@@ -22,7 +22,7 @@
       }
     }
     .title {
-      color: $colorBrand;
+      color: var(--colorBrand);
       overflow: hidden;
       clip-path: inset(0);
       width: auto;
@@ -55,7 +55,7 @@
     overflow: hidden;
     .link {
       background: var(--bgPrimary);
-      color: $colorSecondary;
+      color: var(--colorSecondary);
       border-radius: 1rem;
       text-decoration: none;
       z-index: 100;
@@ -66,7 +66,7 @@
         weight: 400;
       }
       span {
-        color: $colorSecondary;
+        color: var(--colorSecondary);
         z-index: 99;
         position: relative;
       }
@@ -122,7 +122,7 @@
       font-size: 2rem;
       background: var(--bgPrimary);
       clip-path: circle(2rem at center);
-      color: $colorSecondary;
+      color: var(--colorSecondary);
       z-index: 100;
       &::before {
         content: "";
@@ -162,7 +162,7 @@
     @include _alignCenter;
     display: none;
     .link {
-      color: $colorBrand;
+      color: var(--colorBrand);
     }
     @include _xSmallScreen {
       @include _justifyCenter;

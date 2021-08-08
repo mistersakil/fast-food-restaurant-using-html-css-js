@@ -1,3 +1,6 @@
+@mixin bgScrollbar($lightness: 1) {
+  background-color: rgba(236, 5, 91, $lightness);
+}
 @mixin _alignCenter {
   display: flex;
   align-items: center;

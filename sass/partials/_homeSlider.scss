@@ -1,0 +1,134 @@
+.homeSlider {
+  @include _padding($y: 1rem);
+  height: calc(100vh - 8rem);
+  position: relative;
+
+  /* slides */
+  .slides {
+    position: relative;
+    .slide {
+      @include _alignCenter;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 0 2%;
+      padding: 5rem 0;
+      .content {
+        flex: 1 1 45%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 2rem 0;
+        .title {
+          font: {
+            size: 6rem;
+            weight: 700;
+          }
+          animation: 3s ease 1 textTranslation;
+          color: var(--colorBrand);
+          @include _mediumScreen {
+            font-size: 4rem;
+          }
+          @include _smallScreen {
+            font-size: 3.5rem;
+          }
+          @include _xSmallScreen {
+            font-size: 4.5rem;
+          }
+          @include _xxSmallScreen {
+            font-size: 3rem;
+          }
+        }
+        .subTitle {
+          font: {
+            size: 3rem;
+            weight: 500;
+          }
+          color: var(--colorPrimary);
+          animation: 3s ease-in-out 1 textTranslationToBottom;
+          @include _mediumScreen {
+            font-size: 2.2rem;
+          }
+        }
+        .info {
+          font: {
+            size: 1.6rem;
+            weight: 400;
+            family: "Poppins";
+          }
+          animation: 3s linear 1 fadeIn;
+          color: var(--colorPrimary);
+          @include _mediumScreen {
+            font-size: 1.4rem;
+          }
+          @include _xSmallScreen {
+            text-align: center;
+          }
+        }
+        .btn {
+          padding: 1.5rem 5rem;
+          border-radius: 1rem;
+          border: none;
+          background: var(--bgGrey);
+          color: var(--colorSecondary);
+          font-size: 2rem;
+          font-family: "Roboto";
+          margin-top: 2rem;
+          cursor: pointer;
+          position: relative;
+          animation: 1.5s linear infinite upAndDown;
+          span {
+            position: relative;
+          }
+          &::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--bgSecondary);
+            border-radius: 1rem;
+            clip-path: inset(85% 0% 0% 0%);
+            transition: all 0.3s linear;
+          }
+          &:hover::before {
+            clip-path: inset(0%);
+          }
+        }
+        @include _mediumScreen {
+          flex: 1 1 30%;
+          gap: 0.5rem 0;
+        }
+        @include _xSmallScreen {
+          align-items: center;
+        }
+      }
+
+      .figure {
+        flex: 1 1 50%;
+        @include _justifyRight;
+        .img {
+          width: 80%;
+          height: auto;
+          object-fit: cover;
+          animation: 10s ease infinite sliderScaleAnimation;
+          @include _xSmallScreen {
+            width: 65%;
+          }
+        }
+        @include _xSmallScreen {
+          justify-content: center;
+        }
+      }
+
+      @include _xSmallScreen {
+        padding: 2rem 0;
+        flex-direction: column-reverse;
+      }
+    }
+  }
+  @include _mediumScreen {
+    @include _padding($x: 1rem);
+  }
+}
