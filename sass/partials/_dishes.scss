@@ -1,0 +1,116 @@
+.dishes {
+  @include _padding($y: 5rem);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem 2%;
+  background: var(--bgGreyLight);
+  .titles {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    .title {
+      font-size: 4rem;
+      text-transform: uppercase;
+      font-family: "Oswald";
+      letter-spacing: 3px;
+      font-weight: 700;
+      line-height: 8rem;
+      color: var(--colorBrand);
+      @include _xxSmallScreen {
+        font-size: 3rem;
+      }
+    }
+    .subTitle {
+      font-size: 2rem;
+      font-weight: 500;
+      color: var(--colorPrimary);
+    }
+  }
+  /* main */
+  .main {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 2rem;
+    overflow: hidden;
+    /* dish */
+    .dish {
+      flex-basis: calc((100% / 4) - 1.5rem);
+      flex-shrink: 1;
+      flex-grow: 1;
+      height: 37rem;
+      background: var(--bgLight);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      position: relative;
+      padding-top: 1rem;
+      .figure {
+        width: auto;
+        height: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        img {
+          object-fit: cover;
+          object-position: center;
+        }
+      }
+      * {
+        position: relative;
+      }
+      .name {
+        font-size: 2.4rem;
+        font-weight: 400;
+      }
+      .ratings .icon {
+        font-size: 2rem;
+        color: var(--colorBrand);
+      }
+      .info {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        padding: 1rem 10%;
+        color: var(--colorPrimary);
+        font-size: 2rem;
+        font-weight: 700;
+
+        .addToCart {
+          width: 3rem;
+          height: 3rem;
+          border-radius: 50%;
+          cursor: pointer;
+          text-align: center;
+          line-height: 3rem;
+        }
+      }
+      &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: calc(100% + 1px);
+        height: 100%;
+        background: var(--bgPrimary);
+        clip-path: inset(100% 0% 0% 0%);
+        transition: all 0.3s linear;
+      }
+      &:hover::before {
+        clip-path: inset(0% 0% 0% 0%);
+      }
+      @include _xxSmallScreen {
+        width: 100%;
+      }
+    }
+  }
+  @include _smallScreen {
+    @include _padding($y: 8rem);
+  }
+}

@@ -6,6 +6,7 @@ const themeChangeBtn = document.querySelector(".themeChangeBtn");
 const searchBoxClose = document.querySelector(".searchBoxClose");
 const searchBox = document.querySelector(".searchBox");
 const searchBtn = document.querySelector(".searchBtn");
+const navbar = document.querySelectorAll(".nav a");
 
 /* Navbar toggle button  */
 bars.onclick = function (event) {
@@ -18,6 +19,18 @@ bars.onclick = function (event) {
   }
 };
 /* Navbar toggle button end */
+/* Close navbar on navItem click */
+for (i = 0; i < navbar.length; i++) {
+  navbar[i].onclick = function (event) {
+    if (header.classList.contains("active")) {
+      header.classList.remove("active");
+      bars.firstChild.classList.toggle("fa-times");
+    } else {
+      header.classList.add("active");
+    }
+  };
+}
+/* Close navbar on navItem click end */
 
 /* Theme change  button  */
 if (window.localStorage.getItem("theme") == "light") {

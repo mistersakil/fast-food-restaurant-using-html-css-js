@@ -17,6 +17,7 @@
   --bgSecondary: rgb(0, 150, 0);
   --bgLight: rgb(255, 255, 255);
   --bgGrey: rgb(88, 88, 88);
+  --bgGreyLight: rgb(220, 220, 220);
 }
 html {
   font-size: var(--fontSize);
@@ -30,13 +31,15 @@ body {
   font-size: 1.6rem;
   font-family: Oswald, Roboto, Poppins, sans-serif;
   background: var(--bgLight);
+  color: var(--colorPrimary);
   min-height: 200vh;
 }
 
 .dark {
   --bgLight: rgb(80, 80, 80);
-  --bgPrimary: rgb(20, 20, 20);
+  --bgPrimary: rgb(40, 40, 40);
   --colorPrimary: rgb(255, 255, 255);
+  --bgGreyLight: rgb(40, 40, 40);
 }
 /* width */
 ::-webkit-scrollbar {
@@ -51,11 +54,12 @@ body {
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  @include bgScrollbar;
+  // @include bgScrollbar;
+  background: var(--bgPrimary);
   border-radius: 10px;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  @include bgScrollbar(0.6);
+  // @include bgScrollbar(0.6);
 }

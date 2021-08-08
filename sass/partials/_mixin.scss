@@ -19,7 +19,7 @@
   padding: $y $x;
 }
 
-/* Media query Medium Device  992px to 1200px */
+/* Media query Large Device  992px to 1200px */
 @mixin _largeScreen {
   @media screen and (max-width: 1200px) {
     @content;
