@@ -7127,7 +7127,7 @@ body {
   font-family: "Oswald";
   letter-spacing: 3px;
   font-weight: 700;
-  line-height: 8rem;
+  line-height: 5rem;
   color: var(--colorBrand);
 }
 
@@ -7139,8 +7139,9 @@ body {
 
 .dishes .titles .subTitle {
   font-size: 2rem;
-  font-weight: 500;
-  color: var(--colorPrimary);
+  font-weight: 400;
+  color: var(--colorGrey);
+  margin-bottom: 1rem;
 }
 
 .dishes .main {
@@ -7322,7 +7323,7 @@ body {
   font-family: "Oswald";
   letter-spacing: 3px;
   font-weight: 700;
-  line-height: 8rem;
+  line-height: 5rem;
   color: var(--colorBrand);
 }
 
@@ -7334,8 +7335,9 @@ body {
 
 .about .titles .subTitle {
   font-size: 2rem;
-  font-weight: 500;
-  color: var(--colorPrimary);
+  font-weight: 400;
+  color: var(--colorGrey);
+  margin-bottom: 1rem;
 }
 
 .about .main {
@@ -7583,7 +7585,7 @@ body {
   font-family: "Oswald";
   letter-spacing: 3px;
   font-weight: 700;
-  line-height: 8rem;
+  line-height: 5rem;
   color: var(--colorBrand);
 }
 
@@ -7595,8 +7597,9 @@ body {
 
 .menus .titles .subTitle {
   font-size: 2rem;
-  font-weight: 500;
-  color: var(--colorPrimary);
+  font-weight: 400;
+  color: var(--colorGrey);
+  margin-bottom: 1rem;
 }
 
 .menus .main {
@@ -7774,6 +7777,153 @@ body {
 
 @media screen and (max-width: 992px) {
   .menus {
+    padding: 5rem 1rem;
+  }
+}
+
+.reviews {
+  padding: 7rem 5%;
+  background: var(--bgLight);
+  /** .main start **/
+}
+
+.reviews .titles {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.reviews .titles .title {
+  font-size: 4rem;
+  text-transform: uppercase;
+  font-family: "Oswald";
+  letter-spacing: 3px;
+  font-weight: 700;
+  line-height: 5rem;
+  color: var(--colorBrand);
+}
+
+@media screen and (max-width: 350px) {
+  .reviews .titles .title {
+    font-size: 3rem;
+  }
+}
+
+.reviews .titles .subTitle {
+  font-size: 2rem;
+  font-weight: 400;
+  color: var(--colorGrey);
+  margin-bottom: 1rem;
+}
+
+.reviews .main {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 2rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 3rem;
+  /*** .review start ***/
+}
+
+.reviews .main .review {
+  width: calc(100% / 3 - 2rem);
+  padding: 2rem;
+  cursor: pointer;
+  background: var(--bgGreyLight);
+  color: var(--colorGrey);
+  /**** .user start ****/
+  /**** .message start ****/
+}
+
+.reviews .main .review .user {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-bottom: 2rem;
+}
+
+.reviews .main .review .user .avatar {
+  width: 7rem;
+  height: 7rem;
+  line-height: 7rem;
+  text-align: center;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  padding: 0.5rem;
+  background: var(--bgLight);
+}
+
+.reviews .main .review .user .info .ratings .icon {
+  color: var(--colorBrand);
+}
+
+.reviews .main .review .user .quoteIcon {
+  font-size: 5rem;
+}
+
+@media screen and (max-width: 768px) {
+  .reviews .main .review .user .quoteIcon {
+    display: none;
+  }
+}
+
+.reviews .main .review .message {
+  font-family: Roboto, "sans-serif";
+  font-size: 1.4rem;
+  line-height: 2.5rem;
+  text-align: justify;
+  text-justify: distribute;
+}
+
+@media screen and (max-width: 992px) {
+  .reviews .main .review {
+    width: calc(100% / 2 - 2rem);
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .reviews .main .review {
+    width: calc(100%);
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .reviews {
     padding: 5rem 1rem;
   }
 }

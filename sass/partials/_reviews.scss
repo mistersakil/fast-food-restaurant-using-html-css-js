@@ -1,0 +1,70 @@
+.reviews {
+  @include _sectionTitleStyle;
+  @include _padding($y: 7rem);
+  background: var(--bgLight);
+  /** .main start **/
+  .main {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 2rem;
+    align-items: center;
+    margin-top: 3rem;
+    /*** .review start ***/
+    .review {
+      width: calc(100% / 3 - 2rem);
+      padding: 2rem;
+      cursor: pointer;
+      background: var(--bgGreyLight);
+      color: var(--colorGrey);
+      /**** .user start ****/
+      .user {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        margin-bottom: 2rem;
+        .avatar {
+          width: 7rem;
+          height: 7rem;
+          line-height: 7rem;
+          text-align: center;
+          border-radius: 50%;
+          object-fit: cover;
+          object-position: center;
+          padding: 0.5rem;
+          background: var(--bgLight);
+        }
+        .info .ratings .icon {
+          color: var(--colorBrand);
+        }
+        .quoteIcon {
+          font-size: 5rem;
+          @include _smallScreen {
+            display: none;
+          }
+        }
+      }
+      /**** .message start ****/
+      .message {
+        font-family: Roboto, "sans-serif";
+        font-size: 1.4rem;
+        line-height: 2.5rem;
+        text-align: justify;
+        text-justify: distribute;
+      }
+      @include _mediumScreen {
+        width: calc(100% / 2 - 2rem);
+      }
+      @include _xSmallScreen {
+        width: calc(100%);
+      }
+    }
+  }
+
+  @include _mediumScreen {
+    @include _padding($y: 5rem, $x: 1rem);
+  }
+}

@@ -66,7 +66,7 @@
       font-family: "Oswald";
       letter-spacing: 3px;
       font-weight: 700;
-      line-height: 8rem;
+      line-height: 5rem;
       color: var(--colorBrand);
       @include _xxSmallScreen {
         font-size: 3rem;
@@ -74,8 +74,9 @@
     }
     .subTitle {
       font-size: 2rem;
-      font-weight: 500;
-      color: var(--colorPrimary);
+      font-weight: 400;
+      color: var(--colorGrey);
+      margin-bottom: 1rem;
     }
   }
 }
