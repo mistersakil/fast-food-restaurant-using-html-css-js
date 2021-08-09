@@ -6341,6 +6341,36 @@ body {
   }
 }
 
+@-webkit-keyframes zoomIn {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(2);
+            transform: scale(2);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes zoomIn {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(2);
+            transform: scale(2);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
 .header {
   position: -webkit-sticky;
   position: sticky;
@@ -7599,24 +7629,61 @@ body {
   position: relative;
   -webkit-transition: all 0.3s linear;
   transition: all 0.3s linear;
+  cursor: pointer;
+  /* .tools */
   /* .figure */
   /* .more */
   /* .name */
 }
 
+.menus .main .menu .tools {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 7.5rem;
+  background: var(--bgPrimary);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-clip-path: inset(100% 0 0 0);
+          clip-path: inset(100% 0 0 0);
+  -webkit-transition: all 0.4s linear;
+  transition: all 0.4s linear;
+}
+
+.menus .main .menu .tools .icon {
+  width: 4rem;
+  height: 4rem;
+  line-height: 4rem;
+  font-size: 2rem;
+  text-align: center;
+  border-radius: 50%;
+  background: var(--bgLight);
+  color: var(--colorBrand);
+  cursor: pointer;
+}
+
 .menus .main .menu .figure {
   position: relative;
+  height: 25rem;
 }
 
 .menus .main .menu .figure .link {
   display: block;
+  height: 100%;
+  overflow: hidden;
 }
 
 .menus .main .menu .figure .link .img {
   width: 100%;
-  height: 25rem;
-  -webkit-transform: scale(1);
-          transform: scale(1);
+  height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
   -o-object-position: center;
@@ -7662,17 +7729,23 @@ body {
   font-weight: 400;
   color: var(--colorGrey);
   margin: 1rem 0;
-  text-align: justify;
   line-height: 2.2rem;
+  text-align: justify;
+  text-justify: distribute;
 }
 
 .menus .main .menu:hover {
   background: var(--bgPrimary);
 }
 
+.menus .main .menu:hover .tools {
+  -webkit-clip-path: inset(0);
+          clip-path: inset(0);
+}
+
 .menus .main .menu:hover .figure .link .img {
-  -webkit-transform: scale(1.05);
-          transform: scale(1.05);
+  -webkit-animation: 20s ease infinite zoomIn;
+          animation: 20s ease infinite zoomIn;
 }
 
 .menus .main .menu:hover .more .ratings .price {
@@ -7701,7 +7774,7 @@ body {
 
 @media screen and (max-width: 992px) {
   .menus {
-    padding: 0 1rem;
+    padding: 5rem 1rem;
   }
 }
 /*# sourceMappingURL=app.css.map */
