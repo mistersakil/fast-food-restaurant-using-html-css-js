@@ -80,7 +80,7 @@
   }
 }
 
-@mixin _btnBasic($margin: 4rem 0 0 0, $padding: 2rem 5rem) {
+@mixin _btnBasic($margin: 4rem 0 0 0, $padding: 2rem 5rem, $width: auto) {
   .btnBasic {
     position: relative;
     display: inline-block;
@@ -92,6 +92,7 @@
     text-align: center;
     margin: $margin;
     padding: $padding;
+    width: $width;
     cursor: pointer;
     border-radius: 1rem;
     animation: 1.5s linear infinite upAndDown;

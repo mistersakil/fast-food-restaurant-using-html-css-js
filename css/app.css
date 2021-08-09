@@ -6843,12 +6843,6 @@ body {
   }
 }
 
-@media screen and (max-width: 576px) {
-  .homeSlider .slider .slide .content .title {
-    font-size: 4.5rem;
-  }
-}
-
 @media screen and (max-width: 350px) {
   .homeSlider .slider .slide .content .title {
     font-size: 3rem;
@@ -7042,13 +7036,19 @@ body {
 @media screen and (max-width: 992px) {
   .homeSlider {
     padding: 0 1rem;
-    height: 60vh;
+    height: 75vh;
   }
 }
 
 @media screen and (max-width: 576px) {
   .homeSlider {
-    height: 80vh;
+    height: 90vh;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .homeSlider {
+    height: 94vh;
   }
 }
 
@@ -7416,6 +7416,24 @@ body {
   }
 }
 
+.about .main .content .readMore {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media screen and (max-width: 576px) {
+  .about .main .content .readMore {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
 .about .main .content .btnBasic {
   position: relative;
   display: inline-block;
@@ -7427,6 +7445,7 @@ body {
   text-align: center;
   margin: 5rem 0 1rem 0;
   padding: 2rem 5rem;
+  width: auto;
   cursor: pointer;
   border-radius: 1rem;
   -webkit-animation: 1.5s linear infinite upAndDown;
@@ -7455,6 +7474,12 @@ body {
 .about .main .content .btnBasic:hover::before {
   -webkit-clip-path: inset(0%);
           clip-path: inset(0%);
+}
+
+@media screen and (max-width: 576px) {
+  .about .main .content .btnBasic {
+    width: 100%;
+  }
 }
 
 @media screen and (max-width: 1200px) {
