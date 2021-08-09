@@ -135,7 +135,7 @@
   .sliderNav {
     @include _alignCenter;
     justify-content: center;
-    transform: translateY(-3rem);
+    transform: translateY(-6rem);
     gap: 0 1.4rem;
     .icon {
       cursor: pointer;

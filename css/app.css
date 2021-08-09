@@ -7012,8 +7012,8 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-transform: translateY(-3rem);
-          transform: translateY(-3rem);
+  -webkit-transform: translateY(-6rem);
+          transform: translateY(-6rem);
   gap: 0 1.4rem;
 }
 
