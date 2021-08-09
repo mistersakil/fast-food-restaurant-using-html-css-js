@@ -1,0 +1,98 @@
+.menus {
+  @include _sectionTitleStyle;
+  @include _padding($y: 5rem);
+  background: var(--bgGreyLight);
+  /* .main */
+  .main {
+    position: relative;
+    margin: 2rem 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    flex-wrap: wrap;
+    /* .menu */
+    .menu {
+      width: calc(100% / 3 - 2rem);
+      overflow: hidden;
+      background: var(--bgLight);
+      padding: 2rem;
+      position: relative;
+      transition: all 0.3s linear;
+      /* .figure */
+      .figure {
+        position: relative;
+        .link {
+          display: block;
+          .img {
+            width: 100%;
+            height: 25rem;
+            transform: scale(1);
+            object-fit: cover;
+            object-position: center;
+          }
+        }
+      }
+      /* .more */
+      .more {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        margin: 1.5rem 0;
+        font-size: 1.6rem;
+        .ratings {
+          .icon {
+            color: var(--colorBrand);
+          }
+        }
+        .price {
+          font-weight: 700;
+        }
+      }
+      /* .name */
+      .name {
+        font-size: 2.4rem;
+        font-weight: 700;
+        color: var(--colorGrey);
+        margin: 1.5rem 0;
+      }
+      .description {
+        font: {
+          family: "Roboto";
+          size: 1.6rem;
+          weight: 400;
+        }
+        color: var(--colorGrey);
+        margin: 1rem 0;
+        text-align: justify;
+        line-height: 2.2rem;
+      }
+      &:hover {
+        .figure .link .img {
+          transform: scale(1.05);
+        }
+        .more .ratings .price {
+          color: var(--colorSecondary);
+        }
+        .name {
+          color: var(--colorSecondary);
+        }
+        .description {
+          color: var(--colorSecondary);
+        }
+        background: var(--bgPrimary);
+      }
+      @include _smallScreen {
+        width: calc(100% / 2 - 2rem);
+      }
+      @include _xSmallScreen {
+        width: calc(100% - 0rem);
+      }
+    }
+  }
+  @include _mediumScreen {
+    @include _padding($x: 1rem);
+  }
+}

@@ -38,8 +38,9 @@ body {
 .dark {
   --bgLight: rgb(80, 80, 80);
   --bgPrimary: rgb(40, 40, 40);
-  --colorPrimary: rgb(255, 255, 255);
   --bgGreyLight: rgb(40, 40, 40);
+  --colorPrimary: rgb(255, 255, 255);
+  --colorGrey: rgb(235, 235, 235);
 }
 /* width */
 ::-webkit-scrollbar {
