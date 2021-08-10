@@ -15,3 +15,15 @@ It's an open source project. Anyone can use this without any copyright issue.
 - Vanilla JS
 - Responsive
 - Flexbox
+
+## What you will get?
+
+- Animated slider
+- Modern Layout Designing
+- SEO Optimized
+- Speed Optimized
+- Responsive Website Design
+- User Experience Design
+- Installation & Setup
+- Maintenance
+- Cross Browser & Platform test

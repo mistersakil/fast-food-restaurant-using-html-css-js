@@ -20,6 +20,7 @@
       gap: 0 2%;
       padding: 5rem 0;
       display: none;
+      opacity: 0;
       position: absolute;
       z-index: 1;
       transition: all 2s linear;
@@ -117,10 +118,10 @@
         flex: 1 1 50%;
         @include _justifyRight;
         .img {
-          width: 80%;
+          width: 75%;
           height: auto;
           object-fit: cover;
-          animation: 10s ease infinite sliderScaleAnimation;
+          animation: 3s ease 1 sliderTranslateAnimation;
           @include _xSmallScreen {
             width: 65%;
           }
@@ -134,6 +135,7 @@
       }
       &.active {
         display: flex;
+        opacity: 1;
       }
 
       @include _xSmallScreen {
@@ -148,14 +150,56 @@
     justify-content: center;
     transform: translateY(-7rem);
     z-index: 101;
-    gap: 0 1.4rem;
-    .icon {
+    gap: 0 2rem;
+    .sliderActionBtn {
+      border: none;
+      outline: none;
+      background: var(--bgGreyLight);
+      padding: 1rem;
+      border-radius: 0.5rem;
       cursor: pointer;
+      color: var(--colorGrey);
       font-size: 1.4rem;
-      color: var(--colorPrimary);
-      &.icon.active {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 0 0.5rem;
+      width: 10rem;
+      justify-content: center;
+      .icon {
+        font-size: 1.6rem;
         color: var(--colorBrand);
       }
+      @include _xSmallScreen {
+        width: 11rem;
+      }
+    }
+    .prevNext {
+      display: flex;
+      align-items: center;
+      gap: 0 2rem;
+    }
+    .dots {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 0 1rem;
+
+      .icon {
+        cursor: pointer;
+        font-size: 1.4rem;
+        color: var(--colorPrimary);
+        &.icon.active {
+          color: var(--colorBrand);
+        }
+      }
+      @include _smallScreen {
+        gap: 0 3rem;
+      }
+    }
+    @include _xSmallScreen {
+      flex-direction: column;
+      gap: 2rem 0;
     }
   }
   @include _largeScreen {

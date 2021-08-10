@@ -65,35 +65,81 @@ searchBoxClose.onclick = function (event) {
 /* searchBox  button end */
 
 /* Home slider */
-
+let dots = document.querySelectorAll(".sliderNav .dots .icon");
 let sliders = document.querySelectorAll(".slider .slide");
+let playPauseBtn = document.querySelector(".sliderNav .sliderActionBtn");
+let counter = 0;
+let numberOfSlides = sliders.length - 1;
+let intervalId;
+
 function slideActiveStatusOn(index = 0) {
   for (let i = 0; i < sliders.length; i++) {
-    // sliders[i].classList.add("active");
-    console.log(sliders[i]);
     if (i === index) {
       sliders[index].classList.add("active");
+      dots[index].classList.add("active");
     } else {
       sliders[i].classList.remove("active");
+      dots[i].classList.remove("active");
     }
   }
 }
 //dots
-let dots = document.querySelectorAll(".sliderNav .icon");
+
 for (let i = 0; i < dots.length; i++) {
-  console.log(dots[i]);
   dots[i].onclick = function (event) {
+    counter = i;
     this.classList.add("active");
     dotActiveStatusOn(i);
     slideActiveStatusOn(i);
   };
 }
 function dotActiveStatusOn(index = 0) {
-  console.log(index);
   for (let i = 0; i < dots.length; i++) {
     if (i !== index) {
       dots[i].classList.remove("active");
     }
   }
 }
+
+//playPause actions
+
+function playPause(isPlay = true) {
+  if (isPlay) {
+    intervalId = setInterval(function () {
+      if (counter == numberOfSlides) {
+        slideActiveStatusOn(0);
+      } else {
+        slideActiveStatusOn(counter + 1);
+      }
+      if (counter < 2) {
+        counter += 1;
+      } else {
+        counter = 0;
+      }
+    }, 5000);
+  } else {
+    clearInterval(intervalId);
+  }
+}
+
+playPauseBtn.addEventListener("click", function (event) {
+  let icon = this.querySelector(".icon");
+  let span = this.querySelector("span");
+  icon.classList.toggle("fa-pause");
+
+  if (icon.classList.contains("fa-play")) {
+    icon.classList.add("fa-pause");
+    icon.classList.remove("fa-play");
+  } else {
+    icon.classList.add("fa-play");
+    icon.classList.remove("fa-pause");
+  }
+  if (span.innerText.toLowerCase() == "play") {
+    span.innerHTML = "pause";
+    playPause();
+  } else {
+    span.innerHTML = "play";
+    playPause(false);
+  }
+});
 /* Home slider end */

@@ -12,6 +12,15 @@
     opacity: 0.85;
   }
 }
+@keyframes sliderTranslateAnimation {
+  0% {
+    transform: translateX(150%);
+  }
+
+  100% {
+    transform: translateX(0%);
+  }
+}
 
 @keyframes textTranslation {
   0% {
