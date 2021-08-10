@@ -12,12 +12,17 @@
     display: flex;
     align-items: center;
     height: calc(100% - 10rem);
+    flex-wrap: wrap;
     .slide {
       @include _alignCenter;
       justify-content: space-between;
       flex-wrap: wrap;
       gap: 0 2%;
       padding: 5rem 0;
+      display: none;
+      position: absolute;
+      z-index: 1;
+      transition: all 2s linear;
       .content {
         flex: 1 1 45%;
         height: 100%;
@@ -127,6 +132,9 @@
           justify-content: center;
         }
       }
+      &.active {
+        display: flex;
+      }
 
       @include _xSmallScreen {
         padding: 2rem 0;
@@ -139,6 +147,7 @@
     @include _alignCenter;
     justify-content: center;
     transform: translateY(-7rem);
+    z-index: 101;
     gap: 0 1.4rem;
     .icon {
       cursor: pointer;

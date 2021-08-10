@@ -63,3 +63,37 @@ searchBoxClose.onclick = function (event) {
   searchBox.classList.remove("active");
 };
 /* searchBox  button end */
+
+/* Home slider */
+
+let sliders = document.querySelectorAll(".slider .slide");
+function slideActiveStatusOn(index = 0) {
+  for (let i = 0; i < sliders.length; i++) {
+    // sliders[i].classList.add("active");
+    console.log(sliders[i]);
+    if (i === index) {
+      sliders[index].classList.add("active");
+    } else {
+      sliders[i].classList.remove("active");
+    }
+  }
+}
+//dots
+let dots = document.querySelectorAll(".sliderNav .icon");
+for (let i = 0; i < dots.length; i++) {
+  console.log(dots[i]);
+  dots[i].onclick = function (event) {
+    this.classList.add("active");
+    dotActiveStatusOn(i);
+    slideActiveStatusOn(i);
+  };
+}
+function dotActiveStatusOn(index = 0) {
+  console.log(index);
+  for (let i = 0; i < dots.length; i++) {
+    if (i !== index) {
+      dots[i].classList.remove("active");
+    }
+  }
+}
+/* Home slider end */
